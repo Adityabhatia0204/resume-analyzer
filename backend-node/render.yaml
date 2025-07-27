@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: quesera-backend
+    env: node
+    plan: free
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    rootDir: backend-node
