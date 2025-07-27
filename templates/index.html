@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quesera</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script defer src="/static/script.js"></script>
+</head>
+<body>
+    <form id="uploadForm" enctype="multipart/form-data">
+  <h3>Upload Resume & Job Description</h3>
+  <input type="file" name="resume" accept=".pdf,.docx" required>
+  <input type="file" name="jobdesc" accept=".pdf,.docx" required>
+  <button type="submit">Analyze</button>
+</form>
+  <div class="chat-wrapper">
+    <!-- Header -->
+    <header class="chat-header">
+      <h1>Quesera</h1>
+    </header>
+
+    <!-- Chat Window -->
+    <div id="chatBox" class="chat-container">
+      <!-- Messages will be appended dynamically here -->
+    </div>
+
+    <!-- Input Box -->
+    <div id="inputArea" class="chat-input-area">
+      <input type="text" id="promptInput" placeholder="Type your message..." autocomplete="off" />
+      <button onclick="sendPrompt()" aria-label="Send message">Send</button>
+    </div>
+  </div>
+</body>
+</html>
